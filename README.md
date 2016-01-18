@@ -1,5 +1,5 @@
 # scrubtitles
-Copenhackathon #1 Jan 16, 12016 politicianmemeteam productions
+Copenhackathon #1 Jan 16 and 17 2016 politicianmemeteam productions
 
 politicianmemeteam is:  Big Bro Daniel, Magnus Magnus, and iGitK72
 
