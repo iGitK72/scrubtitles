@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- temp styling (included in css later on -->
+      	<style type="text/css">
+        	body {
+          	background-color: black;
+        	}
+        	
+        	.shakr {
+          	animation: shake 1s 1 ease;
+        	}
+        	
+        	@keyframes shake {
+          	0% { text-indent: 0 }
+          	25% { text-indent: -0.8em }
+          	50% { text-indent: .5em }
+          	75% { text-indent: -.5em }
+          	100% { text-indent: 0 }
+        	}
+        	
+        	header {
+          	display: flex;
+          	color: white;
+          	position: fixed;
+          	height: 50px;
+          	top: 0;
+          	width: 100%;
+          	width: 100vw;
+        	}
+        	
+        	header .brandname {
+            align-self: center;
+            margin: 0 auto;
+            height: 50px;
+            width: 68px;
+        	}
+        	
+        	.wrap {
+          	box-sizing: border-box;
+        	  position: absolute;
+          	overflow: hidden;
+          	padding: 50px 0;
+          	width: 100vw;
+          	height: 100vh;
+        	}
+        	
+        	.wrap video {
+          	width: 100%;
+        	  height: 100%;
+            bottom: 0;
+            position: relative;
+        	}
+        	
+        	#genre {
+          	background: transparent url('img/genres_map.svg') 0 -100% no-repeat;
+          	width: 50px;
+          	height: 0;
+          	position: fixed;
+          	top: 50px;
+          	right: 1em;
+          	opacity: 1;
+        	}
+        	
+        	
+        	#genre.comedy { background-position-y: 0 }
+        	#genre.romance { background-position-y: -50px }
+        	#genre.horror { background-position-y: -100px }
+        	
+        	
+        	#genre.hidegenre {
+          	height: 50px;
+          	transition: opacity .5s;
+          	-webkit-transition: opacity 1s;
+          	opacity: 0;
+        	}
+        	
+        	.hideheader {
+          	transition: padding 2s ease-out;
+          	padding: 0 0;
+        	}
+          
+          #dashboard {
+            box-sizing: border-box;
+            position: fixed;
+            width: 100%;
+            width: 100vw;
+            background-color: white;
+            height: 100%;
+            height: 100vh;
+            top: 0;
+            right: 0;
+          }
+          
+          #dashboard .inner{
+            padding: 1em 2em;
+          }
+          
+          #dashboard.hide { width: 0vw; overflow: hidden; }
+          
+      	</style>
+      	<style id="genrecolor" type="text/css">
+        	::cue {
+          	color: white;
+        	}
+        </style>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header><p class="brandname"><img src="img/cc-shake-logo.svg" /></p><div id="genre" class="comedy"></div></header>
+        <div class="wrap">
+          <video autoplay="1" muted />
+            <source src="http://stm.dam.digizuite.dk/dmm3bwsv3/372_10032_10001_1_2_0_6e5d6f10-e316-43e4-8fef-e33d36336140.mp4?635885556265320000" type="video/mp4">
+          </video>
+        </div>
+        <div id="dashboard" class="about hide">
+          <div class="inner">
+            <a href="#" id="closedash">CLOSE</a>
+            <p>the CC-SHKR is a collaboration project made at the Copenhackathon, 16-17th og January, 2016.
+            The idea for the service is was to recreate the random events that happened on swedish public television, where politician’s had children’s movie subtitles added by a mistake. We found the project fun to do, since the screenshots from TV already had us laughing. The people behind the project are: Daniel Nielsen, Kevin Hall and Magnus Nielsen.
+            Sources:
+            The Ministry of Denmark
+            Open-Subtitles.org
+            Subsmax.com</p>
+          </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/jquery.touchSwipe.js"></script>
+        <script src="js/vendor/shake.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/videocontrol.js"></script>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
